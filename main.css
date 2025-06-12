@@ -195,7 +195,9 @@ r
 }
 
 @media (max-width:768px){
-  
+  body{
+  width:124%;
+  }
 
     header{
         width: 100%;
