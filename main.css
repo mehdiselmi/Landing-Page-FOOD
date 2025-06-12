@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root{
+    --color-text:rgb(202, 11, 11);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Heebo", sans-serif;
+}
+
+body{
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(img/fried-chicken-breast-with-vegetables.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+header{
+    width: 100%;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px;
+    background: #222;
+    z-index: 1000;
+    position: fixed;
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+
+.logo img{
+    width: 30px;
+    
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* color: var(--color-text); */
+   
+}
+
+.logo h1 a{
+ font-weight: boold;
+    color: red;
+}
+
+header ul{
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+}
+
+header ul li{
+    list-style: none;
+    margin-left: 50px;
+    font-size: 16px; position: relative;
+        text-transform: uppercase;
+}
+
+header ul li a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 2px;
+    width: 100%;
+    background: red;
+    transform-origin: bottom right;
+    transform: scaleX(0);
+    transition: transform .4s ease;
+
+}
+
+header ul li a:hover::after{
+    transform: scaleX(1);
+}
+
+header button{
+    width: 100px;
+    padding: 5px 10px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    font-size: 18px;
+    color: white;
+    border-radius: 5px;
+    margin-right: 10px;
+    background: var(--color-text);
+    flex: 1 1 30%;
+
+}
+
+header button:hover{
+    background: rgb(219, 58, 58);
+}
+
+header .menu {
+    display: flex;
+    align-items: center;
+}
+
+header .menu i{
+    display: none;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+section img{
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 525px;
+}
+
+section .image{
+    position: relative;
+}
+
+section .right{
+    position: absolute;
+    top: 200px;
+    left: 840px;
+}
+
+section .right img{
+    width: 350px;
+ height:300px;
+ animation: fade 1s ease-out;
+}
+
+@keyframes fade{
+    0%{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+}
+
+.text .parg{
+    position: absolute;
+    color: white;
+    top: 210px;
+    left: 100px;
+    border-left: 2px solid white;
+    animation:fadeleft 1s ease-out;
+    
+}
+
+.text .parg h1{
+     line-height: 65px;
+    font-size: 56px;
+    font-weight: 300;
+    margin-bottom: 20px;
+
+}
+
+.text .parg p{
+    font-size: 24px;
+    margin-right: 15px;
+    opacity: .7;
+}
+
+.text .parg button {
+       width: 160px;
+    padding: 8px 10px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    font-size: 18px;
+    color: white;
+    border-radius: 5px;
+    margin-top: 25px;
+    background: var(--color-text);
+        text-transform: uppercase;
+}
+r
+.text .parg button:hover{
+    background: rgb(219, 58, 58);
+}
+
+@media (max-width:768px){
+  
+
+    header{
+        width: 100%;
+         display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    flex-wrap: wrap;
+    }
+    header .logo{
+    width: 100%;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    background: #222;
+     position: absolute;
+    left: 0;
+    margin: 3px 10px;
+    }
+
+    header ul{
+        display: none;
+        position:absolute;
+        flex-direction: column;
+        background:rgba(254, 245, 245, 0.954);
+        top: 65px;
+        width: 100%;
+        left: 0;
+        padding: 5px 0;
+        height: 200px;
+        flex-wrap: wrap;
+        width: 100%;
+         margin-left: 0;
+    }
+
+    header ul.active{
+        display: flex;
+    }
+
+    header ul li a{
+        color: black;
+        font-weight: bold;
+        font-size: 18px;
+       
+    }
+
+    header ul li a:hover{
+        color: red;
+    }
+
+    header .menu{
+        position: absolute;
+       right: 50px;
+       font-size: 10px;
+       width: 100px;
+       height: 50px;
+    }
+
+    header .menu i{
+        position: absolute;
+        right: -40px;
+        color: white;
+        display: initial;
+    }
+
+    section {
+        position: absolute;
+        left:-90px;
+        font-size: 12px;
+        top: -60px;
+    }
+
+    section .text{
+        width: 500px;
+    }
+
+    section .right{
+        position:absolute;
+        left: 550px;
+        top:260px;
+       
+    }
+
+    section{
+        display: flex;
+        flex-direction: column;
+    }
+
+    section .right img{
+        width: 220px;
+        height: 220px;
+    }
+}
